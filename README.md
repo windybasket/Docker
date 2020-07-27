@@ -1,29 +1,21 @@
-## Welcome to GitHub Pages
+## Ubuntu Desktop Bioinformatics Docker Images
+![138490](138490.jpg)
+- Beginner-friendly Ubuntu Desktop Bioinformatics Docker Images
+- Hit the ground running and develop with best-in-class software and a familiar Desktop environment.
+- Want to send all your work to a friend? Send them the Docker container and they can take a look around without typing 'cd' 100 times.
+- It'll (almost definitely) work on their computer.
+- Don't worry about blowing up your computer, work in a container.
+- Reproducible science*
 
-You can use the [editor on GitHub](https://github.com/windybasket/Docker/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+\* *may vary*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+# Getting Started
+All we have to do is install the Docker program on our computer. To do this:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
