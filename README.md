@@ -8,7 +8,6 @@
 
 \* *may vary*
 
-
 ## Getting Started
 We only need to install Docker and download the accompanying Docker Image once on our computer to run images. To do this:
 [Get Docker](https://docs.docker.com/get-docker/)
@@ -27,8 +26,10 @@ Samtools
 SRA Toolkit
 Igv
 
-
 #Some Docker Commands
 We already know how to get a Docker Image and run it, but we can also:
 Copy files from the virtual machine to your local machine with Docker cp
 Save/share a Docker Image on your online account with Docker push
+
+#Highly Customizable
+Using the base Docker image and installing further software simplifies generating custom images for specific use cases. A second Image was generated with additional single-cell rna sequencing software installed to draw figures, demonstrating the utility of the images.
