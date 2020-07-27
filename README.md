@@ -1,29 +1,34 @@
 ## Ubuntu Desktop Bioinformatics Docker Images
-![138490](138490.jpg)
-- Beginner-friendly Ubuntu Desktop Bioinformatics Docker Images
-- Hit the ground running and develop with best-in-class software and a familiar Desktop environment.
+
+- Beginner-friendly - hit the ground running and develop with best-in-class software and a familiar Desktop environment.
 - Want to send all your work to a friend? Send them the Docker container and they can take a look around without typing 'cd' 100 times.
-- It'll (almost definitely) work on their computer.
+- Customize with ease via apt, bioconductor, CRAN, etc.
 - Don't worry about blowing up your computer, work in a container.
 - Reproducible science*
 
 \* *may vary*
 
 
-# Getting Started
-All we have to do is install the Docker program on our computer. To do this:
+## Getting Started
+We only need to install Docker and download the accompanying Docker Image once on our computer to run images. To do this:
+[Get Docker](https://docs.docker.com/get-docker/)
+
+[Get the accompanying Docker Image](docker pull windybasket/bio:base)
+
+#Run Docker
+docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base
+[Go to the Desktop](http://127.0.0.1:6080/)
+
+#Installed Tools
+Ubuntu Desktop, Git, Curl and Wget, Htop, Nano, Firefox
+Python3, Pip3, Miniconda
+R, Rstudio, devtools (for R)
+Samtools
+SRA Toolkit
+Igv
 
 
-
-
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/windybasket/Docker/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#Some Docker Commands
+We already know how to get a Docker Image and run it, but we can also:
+Copy files from the virtual machine to your local machine with Docker cp
+Save/share a Docker Image on your online account with Docker push
