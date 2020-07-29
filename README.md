@@ -6,6 +6,8 @@
 - Don't worry about blowing up your computer, work in a container.
 - Reproducible science*
 
+Released ![Desktop Images](https://hub.docker.com/repository/docker/windybasket/bio/tags?page=1) including base and single-cell RNA sequencing Images at the link. We show the utility of the images by modifying the base image into a single-cell RNA (ScRNA) sequencing image, and use the ScRNA image to write a published paper including formatting, from data housed in the NCBI Sequence Read Archive (SRA).
+
 \* *may vary*
 
 ## Getting Started
@@ -41,8 +43,29 @@ Save/share a Docker Image on your online account with Docker push
 
 
 ## Highly Customizable
-Using the base Docker image and installing further software simplifies generating custom images for specific use cases. A second Image was generated with additional single-cell rna sequencing software installed to draw figures, demonstrating the utility of the images.
 
+Using the base Docker image and installing further software simplifies generating custom images for specific use cases. A second Image was generated with additional single-cell rna sequencing software installed, demonstrating the utility of the images. Bioinformatic software is highly diverse and changes rapidly; for this reason we install software to install software.
+
+Example software installation: SRA-Toolkit
+
+Installation is standard procedure for Ubuntu not in apt:
+
+[Download for Ubuntu](https://ncbi.github.io/sra-tools/install_config.html)
+
+Go to Downloads file and unzip: `tar -xvf sratoolkit.2.10.8-ubuntu64.tar.gz`
+
+Place sratoolkit.2.10.8-ubuntu64 folder in tools folder `/root/tools`
+
+Edit and source bash profile:
+
+`nano ~/.profile`
+append to end of file and save (cntrl+x):
+`export PATH=$PATH:/root/tools/sratoolkit.2.10.8-ubuntu64/bin`
+source edited profile: `source ~/.profile`
+
+Specific to sratoolkit:
+
+run `vdb-config -i`
 
 ## Most Common Docker Commands
 List Docker Images on your local machine
