@@ -10,19 +10,18 @@
 
 ## Getting Started
 We only need to install Docker and download the accompanying Docker Image once on our computer to run images. To do this:
-[Get Docker](https://docs.docker.com/get-docker/)
+[Install Docker](https://docs.docker.com/get-docker/)
+Open up a terminal and type:
+`docker pull windybasket/bio:base` (Gets the accompanying Docker Image)
+Now we type:
+`docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base` (start the Docker virtual computer)
 
-Get the accompanying Docker Image:
-`docker pull windybasket/bio:base`
-
-## Run Docker
-docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base
-[Go to the Desktop](http://127.0.0.1:6080/)
+[Go to the Desktop](http://127.0.0.1:6080/), open up a web browser and go to http://127.0.0.1:6080/
 
 ## Installed Tools
-Ubuntu Desktop, Git, Curl and Wget, Htop, Nano, Firefox
+Ubuntu Desktop, Firefox, Git, Curl and Wget, Nano, Firefox, Htop
 Python3, Pip3, Miniconda
-R, Rstudio, devtools (for R)
+R 4.0.0, Rstudio, devtools (for R)
 Samtools
 SRA Toolkit
 Igv
@@ -32,5 +31,22 @@ We already know how to get a Docker Image and run it, but we can also:
 Copy files from the virtual machine to your local machine with Docker cp
 Save/share a Docker Image on your online account with Docker push
 
+
 ## Highly Customizable
 Using the base Docker image and installing further software simplifies generating custom images for specific use cases. A second Image was generated with additional single-cell rna sequencing software installed to draw figures, demonstrating the utility of the images.
+
+
+##Most Common Docker Commands
+List Docker Images on your local machine
+`sudo docker image ls`
+Run a Docker Image
+`docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base`
+or more generally:
+`docker run -p 6080:80 -v /dev/shm:/dev/shm user/build:tag`
+Save your docker on Docker's website
+`sudo docker ps`
+docker commit CONTAINER_ID yourImage
+`docker commit fbe973c7d5fc windybasket/bio:base`
+`docker push windybasket/bio:base`
+Create a new docker image from an existing one (if you customized an image and want to 'save as'):
+`docker commit -p -a "author_here" -m "your_message" bd91ca3ca3c8 name_of_new_image`
