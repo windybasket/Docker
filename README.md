@@ -9,11 +9,19 @@
 \* *may vary*
 
 ## Getting Started
+
 We only need to install Docker and download the accompanying Docker Image once on our computer to run images. To do this:
 [Install Docker](https://docs.docker.com/get-docker/)
+
+On Mac, start the Docker Desktop app in your app folder. There should be a Docker icon in the top right (whale) on successful startup.
+On Windows, start the Docker Desktop app by searching in the start bar.  There should be a Docker icon in the bottom right (whale) on successful startup.
+
 Open up a terminal and type:
+
 `docker pull windybasket/bio:base` (Gets the accompanying Docker Image)
+
 Now we type:
+
 `docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base` (start the Docker virtual computer)
 
 [Go to the Desktop](http://127.0.0.1:6080/), open up a web browser and go to http://127.0.0.1:6080/
@@ -36,7 +44,7 @@ Save/share a Docker Image on your online account with Docker push
 Using the base Docker image and installing further software simplifies generating custom images for specific use cases. A second Image was generated with additional single-cell rna sequencing software installed to draw figures, demonstrating the utility of the images.
 
 
-##Most Common Docker Commands
+## Most Common Docker Commands
 List Docker Images on your local machine
 `sudo docker image ls`
 Run a Docker Image
