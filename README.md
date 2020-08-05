@@ -30,7 +30,7 @@ Now we type:
 
 ## Installed Tools
 Ubuntu Desktop, Firefox, Git, Curl and Wget, Nano, Firefox, Htop
-Python3, Pip3, Miniconda
+Python3, Pip3, Miniconda, pycharm (run with `./pycharm.sh`)
 R 4.0.0, Rstudio, devtools (for R)
 Samtools
 SRA Toolkit
@@ -68,16 +68,30 @@ Specific to sratoolkit:
 run `vdb-config -i`
 
 ## Most Common Docker Commands
-List Docker Images on your local machine
+
+List Docker Images on your local machine (used for 'docker push,pull,run')
 `sudo docker image ls`
+
+List Running Docker Containers on your local machine (used for 'docker cp')
+`sudo docker ps`
+
 Run a Docker Image
 `docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base`
+
 or more generally:
 `docker run -p 6080:80 -v /dev/shm:/dev/shm user/build:tag`
+
 Save your docker on Docker's website
 `sudo docker ps`
+
 docker commit CONTAINER_ID yourImage
 `docker commit fbe973c7d5fc windybasket/bio:base`
 `docker push windybasket/bio:base`
+
 Create a new docker image from an existing one (if you customized an image and want to 'save as'):
 `docker commit -p -a "author_here" -m "your_message" bd91ca3ca3c8 name_of_new_image`
+
+sudo docker image ls
+number of the image id you want to copy, name of what you want to have named
+sudo docker tag 24572082869c windybasket/bio:single_cell_1
+sudo docker push windybasket/bio:single_cell_1
