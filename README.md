@@ -1,12 +1,11 @@
 ## Ubuntu Desktop Bioinformatics Docker Images
 
-- Beginner-friendly - hit the ground running and develop with best-in-class software and a familiar Desktop environment.
-- Want to send all your work to a friend? Send them the Docker container and they can take a look around without typing 'cd' 100 times.
-- Customize with ease via apt, bioconductor, CRAN, etc.
-- Don't worry about blowing up your computer, work in a container.
+- Beginner-friendly - best-in-class software preinstalled and a familiar Desktop environment.
+- Send a Docker image and take a look around without typing 'cd' 100 times.
+- Customize via apt, bioconductor, CRAN, etc.
 - Reproducible science*
 
-Released ![Desktop Images](https://hub.docker.com/repository/docker/windybasket/bio/tags?page=1) including base and single-cell RNA sequencing Images at the link. We show the utility of the images by modifying the base image into a single-cell RNA (ScRNA) sequencing image, and use the ScRNA image to write a published paper including formatting, from data housed in the NCBI Sequence Read Archive (SRA).
+Released [Desktop Images](https://hub.docker.com/repository/docker/windybasket/bio/tags?page=1) including base and single-cell RNA sequencing Images at the link. We show the utility of the images by modifying the base image into a single-cell RNA (ScRNA) sequencing image and an image based on Viraltrack.
 
 \* *may vary*
 
@@ -20,11 +19,11 @@ On Windows, start the Docker Desktop app by searching in the start bar.  There s
 
 Open up a terminal and type:
 
-`sudo docker pull windybasket/bio:base` (Gets the accompanying Docker Image)
+`sudo docker pull windybasket/public:base` (Gets the accompanying Docker Image)
 
 Now we type:
 
-`sudo docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/bio:base` (start the Docker virtual computer)
+`sudo docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/public:base` (start the Docker virtual computer)
 
 [Go to the Desktop](http://127.0.0.1:6080/), open up a web browser and go to http://127.0.0.1:6080/
 
