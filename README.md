@@ -19,11 +19,11 @@ On Windows, start the Docker Desktop app by searching in the start bar.  There s
 
 Open up a terminal and type:
 
-`sudo docker pull windybasket/public:base` (Gets the accompanying Docker Image)
+`sudo docker pull windybasket/public:base_1.01` (Gets the accompanying Docker Image)
 
 Now we type:
 
-`sudo docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/public:base` (start the Docker virtual computer)
+`sudo docker run -p 6080:80 -v /dev/shm:/dev/shm windybasket/public:base_1.01` (start the Docker virtual computer)
 
 [Go to the Desktop](http://127.0.0.1:6080/), open up a web browser and go to http://127.0.0.1:6080/
 
