@@ -5,7 +5,7 @@
 - Customize via apt, bioconductor, CRAN, etc.
 - Reproducible science*
 
-Released [Desktop Images](https://hub.docker.com/repository/docker/windybasket/bio/tags?page=1) including base and single-cell RNA sequencing Images at the link. We show the utility of the images by modifying the base image into a single-cell RNA (ScRNA) sequencing image and an image based on Viraltrack.
+Released [Desktop Images](https://hub.docker.com/repository/registry-1.docker.io/windybasket/public/tags?page=1) including base and single-cell RNA sequencing Images at the link. We show the utility of the images by modifying the base image into a single-cell RNA (ScRNA) sequencing image and an image based on Viraltrack.
 
 \* *may vary*
 
