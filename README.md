@@ -135,3 +135,6 @@ sudo docker push windybasket/bio:single_cell_1
 
 
 trash is in ~/.local/share/Trash/files
+sudo docker commit a19d55acb79a windybasket/bio:viraltrack
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
